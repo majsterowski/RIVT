@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../Logoallsizes/logo.png">
+<style>
+/*html { overflow-y:hidden;}*/
+* { padding: 0; margin: 0;}
+@font-face{ font-family: perfmedevo; src:url(../Fonts/MADEEVO.otf);}
+@font-face{ font-family: boldevo;src:url(../Fonts/MADEBoldEVO.otf);} 
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 2.5s;
+  animation-name: fade; animation-duration: 2.5s;}
+@-webkit-keyframes fade {from {opacity: .9} to {opacity: 1}}
+@keyframes fade {from {opacity: .9} to {opacity: 1}}
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        z-index: 101;
+        width:100%;
+        position: fixed;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  min-width: 10%;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+}
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+.odnoXX2{
+        position: absolute;
+        z-index: 101;
+        margin-top: vh;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 350%;
+    }
+
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+    opacity: 0.8;
+    }
+.mother1{
+    height: 200vh;
+    width: 100%;
+    background-image: url(../Graphics/oferta1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    .box{
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        background-color: whitesmoke;
+        opacity: 0.9;
+    }
+
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="../Logoallsizes/logo.png"> RIVT </div>
+<a href="../index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="../oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="../index.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="../index.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="../index.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+<div class="mother1">
+    <div class="box">
+Kraj
+Indie
+Opis
+DELHI - JAIPUR - FATEHPUR SIKRI - AGRA - DELHIDzień 1. Warszawa - Delhi. Wylot z lotniska Chopina do Delhi.Dzień 2. Delhi (trasa okoł o 45 km). Przylot do Delhi na mię dzynarodowe lotnisko im. Indiry Gandhi. Transfer do hotelu i czas wolny na odpoczynek. Po poł udniu, dla chę tnych wycieczka do Kompleksu Ś wią tyń Akshardham (dodatkowo pł atne na miejscu u pilota). Nowoczesny i zarazem tradycyjny, olbrzymich rozmiaró w kompleks został oddany do uż ytku w listopadzie 2005 roku. Jest to zapierają cy dech w piersiach kompleks finezyjnie zdobionych budowli, któ re tradycją i architekturą nawią zują do ponad trzydziestowiecznej tradycji hinduizmu. Przy budowie zastosowano tradycyjny, w pó ł nocnych Indiach, marmur i czerwony piaskowiec, obrabiane w pię ciu ró ż nych stylach architektonicznych - z Radż astanu, Orrisy, Gudż aratu oraz z elementami mogolskimi i dż inijskimi. Wszystko postawione i dopracowane w rekordowo kró tkim okresie 5 lat. Obiadokolacja i nocleg w hotelu.Dzień 3. Delhi (trasa okoł o 35 km). Po ś niadaniu zwiedzanie stolicy Indii, olbrzymiego miasta historycznie podzielonego na starą i nową cześ ć. Zwiedzanie zaczniemy od Starego Delhi, wybudowanego w czasach mogolskich, zwanego też Szahdż ahanabadem. Dzisiaj stanowi ono centrum delijskich muzuł manó w, dlatego pierwszym punktem programu bę dzie Jama Masjid (Meczet Pią tkowy), najwię kszy meczet w Indiach. Pó ź niej przejaż dż ka rikszami po wą skich i nadal klimatycznych uliczkach Starego Delhi. Zobaczymy takż e są siadują cy z meczetem Czerwony Fort (tylko z zewną trz) i udamy się do Raj Gath - miejsca kremacji Mahatmy Gandhiego. Nastę pnie przemieś cimy się do tzw. Nowego Delhi, wybudowanego na począ tku XX w. przez Brytyjczykó w, jako centrum administracyjne kolonialnych Indii. Zobaczymy mię dzy innymi przyległ e, bliź niacze budynki Sekretariató w, Sansad Bhawan (Parlament Indyjski) oraz przejedziemy w pobliż u Bramy Indii, stanowią cej okazał y ł uk triumfalny wzniesiony ku czci Hindusó w poległ ych na wszystkich frontach I Wojny Ś wiatowej i podczas Wojen Afgań skich. W dalszej czę ś ci dnia odwiedzimy grobowiec Humayuna uznawany za architektoniczny pierwowzó r sł ynnego Taj Mahal. Na koniec dnia zwiedzimy Gurdwarę Bangla Sahib - najwię kszą i najważ niejszą w Delhi ś wią tynię sikhijską. Obiadokolacja i nocleg w hotelu.Dzień 4. Delhi - Jaipur (trasa okoł o 260 km, przejazd okoł o 6 godzin). Ś niadanie i wykwaterowanie z hotelu. Przedpoł udniem odwiedzimy Kutb Minar - najwyż szy ceglany minaret w Indiach, któ ry wraz z okolicznymi zabytkami wpisany został na listę ś wiatowego dziedzictwa UNESCO. Z Delhi udamy się w kierunku Radż astanu, do miejscowoś ci Jaipur. W miarę moż liwoś ci czasowych, przed zakwaterowaniem w hotelu w Jaipurze, zł oż ymy wizytę w miejscowej "drukarni tekstylió w". Zakwaterowanie w hotelu, obiadokolacja.Dzień 5. Jaipur (trasa okoł o 30 km). Rankiem, po ś niadaniu, udamy się do Fortu Amber, któ rego pierwszy dziedziniec zdobę dziemy na sł oniach. XI-wieczny fort jest doskonale umiejscowioną , mocno obwarowaną Radż pucką fortyfikacją , a jednocześ nie przez dł ugi czas był gł ó wną siedzibą bogatego rodu spod znaku sł oń ca. Niewą tpliwe najpię kniejsze budowle to Brama Ganesi oraz Shish Mahal - zdobiony tysią cami kawał kó w luster. W dalszej czę ś ci dnia wró cimy w obrę b muró w XVIII-wiecznego miasta Jaipur, zwanego też Ró ż owym Miastem. Zwiedzimy obecną siedzibę Radż y Jaipuru - Pał ac Miejski oraz sprawdzimy aktualny czas sł oneczny na olbrzymich kamiennych przyrzą dach astronomicznych w Jantar Mantar. Kolejna nazwa Jaipuru to Miasto Klejnotó w, z bogactwa któ rych i ich doskonał ej obró bki miasto sł ynie, wię c bę dą c tam nie moż na pominą ć kró tkiego pokazu rę cznej obró bki kamieni szlachetnych. Zwiedzają c Jaipur na pewno też zrobimy sobie zdję cia przy Hava Mahal (Pał acu Wiatró w) oraz Jal Mahal (Pał acu na Wodzie). Po poł udniu czas wolny. Chę tni bę dą mogli (za dodatkową opł atą ) odwiedzić urokliwie poł oż oną , pomię dzy okolicznymi wzgó rzami Galta Ji. Wielowiekowy kompleks ś wią tyń nawią zuje do ż yją cego tu okoł o 2500 lat wcześ niej Pana Galta - mistyka, mę drca, cudotwó rcy. Opró cz wielu funkcjonują cych ś wią tyń , poś wię conych ró ż nym hinduskim bogom oraz ś wię tych basenó w ablucyjnych, wielką atrakcją Galty są stada mał p zamieszkują ce na stał e te tereny. Obiadokolacja i nocleg w hotelu.Dzień 6. Jaipur - Fathepur Sikri - Agra (trasa okoł o 260 km, okoł o 6 godzin). Ś niadanie w hotelu, wykwaterowanie i przejazd w kierunku Agry. Po drodze zwiedzanie pozostał oś ci miasta Fatehpur Sikri. Miasto wybudowane w 1569 roku, przez najwspanialszego mogolskiego cesarza Akbara, tak jak szybko powstał o, tak samo szybko zniknę ł o, przez co okreś lane jest mianem wymarł ego, opuszczonego miasta. Dzię ki kaprysowi Wielkiego Cesarza, któ ry chciał mieszkać blisko Salima Chisti, lokalnego mę drca, moż emy dzisiaj spacerować po olbrzymim, ś wietnie zachowanym kompleksie pał acowym z czasó w ś wietnoś ci imperium mogolskiego w Indiach. Przejdziemy przez kolejne dziedziń ce pał acowe odwiedzają c mię dzy innymi Diwan-i-Am (dziedziniec audiencji publicznych), Diwan-i-Khas z monumentalną kolumną , gdzie znajdował się tron (pawilon audiencji prywatnych), pię knie zdobiony Pawilon Tureckiej Suł tanki oraz okazał y Pał ac Jodhabai. Nocleg i obiadokolacja w Agrze. Dla chę tnych (za dodatkową opł atą ) moż liwoś ć uczestnictwa w wieczornym spektaklu teatralnym Taj Show opowiadają cym niezwykle wzruszają cą historię powstania sł ynnego Taj Mahal, któ re odwiedzimy w kolejnym dniu.Dzień 7. Agra - Delhi (trasa okoł o 220 km, 4-5 godzin). Wczesnym ranem, przed ś niadaniem udamy się do jednego z Siedmiu Cudó w Ś wiata - sł ynnego Taj Mahal. Bajeczny, olbrzymi grobowiec zbudowany z biał ego marmuru, inkrustowanego mnó stwem kamieni szlachetnych i pó ł szlachetnych, uznawany jest za ś wiadectwo wielkiej mił oś ci cesarza Shahjahana do najukochań szej ż ony Mumtaz Mahal. Jego budowa trwał a 22 lata, od 1631 do 1653 r. i pochł onę ł a znaczną cześ ć cesarskiego skarbca. Obejrzymy go w peł nym majestacie i otoczeniu mogolskich ogrodó w. Po wizycie w Taj Mahal powró t do hotelu na ś niadanie. W dalszej czę ś ci dnia odwiedzimy Czerwony Fort - zespó ł budowli fortecznych i pał acowych pochodzą cy z czasó w cesarza Akbara. Fortyfikację ukoń czono w 1565 roku, jednak jako gł ó wna siedziba wł adcó w mogolskich był a wielokrotnie przebudowywana wewną trz. Dzię ki temu do dziś zachował się cał y kompleks pał acowy, któ rego poszczegó lne czę ś ci reprezentują ró ż ne style i nazwane są od imienia mogolskiego wł adcy, któ ry je przebudowywał. W ś rodku dnia, w miarę dostę pnoś ci czasowej, bę dziemy mieli okazje zapoznać się z kontynuowanymi od czasó w budowy Taj Mahal tradycyjnymi metodami inkrustacji marmuró w. Popoł udniu powró t do Delhi. Po przyjeź dzie do Delhi zakwaterowanie w hotelu, czas wolny. Obiadokolacja w hotelu. Wieczorem / nocą transfer na lotnisko oraz wylot do Polski.Dzień 8 (15). Przylot na lotnisko w Warszawie. Osoby wybierają ce opcję przedł uż enia o pobyt na Goa lub w Emiratach Arabskich, tego dnia wylecą do wybranego hotelu i po 8 dniach wypoczynku powró cą do kraju.
+UWAGA !
+Należ y pamię tać , ż e Indie to fascynują cy i egzotyczny kraj, co opró cz wspaniał ych wraż eń wią ż e się z pewnymi ucią ż liwoś ciami podró ż y. Dla Pań stwa komfortu staramy się bardzo, aby standard zakwaterowania nie wykraczał poniż ej ogó lnie przyję te normy hoteli 3*, jednak nie mamy wpł ywu na sł aby stan indyjskich dró g i ucią ż liwoś ci zwią zane z dł ugimi przejazdami.
+Wyposażenie
+Brak udogodnień dla osób o ograniczonej sprawności ruchowej.
+Cena zawiera
+Cena zawieraprzelot Polska - Delhi - Polska liniami rejsowymi bezpoś rednio lub z przesiadkamiopł aty lotniskowe, ubezpieczenie KL, NNWzakwaterowanie w hotelach 3-4* w pokojach dwuosobowych z ł azienkami i klimatyzacją i/lub wentylatorami przysufitowymi, wczesne zakwaterowanie w hotelu drugiego dnia programu, w zależ noś ci od godziny przylotu do Delhi, oraz pó ź ne wykwaterowanie z hotelu w ostatnim dniu wycieczki, wyż ywienie: ś niadania i obiadokolacjetransport klimatyzowanym autokarem na trasie wycieczkizwiedzanie wg programu (bez biletó w wstę pu)serwis wykwalifikowanego polskiego pilotaprzelot wewnę trzny, pobyt w wybranym hotelu na Goa oraz transfer lotnisko - hotel - lotnisko dla osob wybierają cych opcję przedluż enia z pobytem na Goa
+Cena nie zawiera
+obowią zkowa opł ata za wstę py do zwiedzanych obiektó w, obsł uga lokalnych przewodnikó w, serwis miejscowego agenta, zwyczajowe napiwki i inne opł aty lokalne w wysokoś ci ok. 185 USD na osobę jako pakiet pł atny lokalnemu kontrahentowi (pilotowi) na miejscu wycieczki, dopł aty do zakwaterowania w pokoju pojedynczym albo do tań szej opcji "podró ż ują cy samotnie" (uczestnik moż e być dokwaterowany do innej osoby tej samej pł ci) - w przypadku realizacji dokwaterowania w ramach opcji "podró ż ują cy samotnie", dopł ata zostanie anulowanaopł aty za fotografowanie i filmowanie ok. 10 USD/oskoszty wycieczek fakultatywnych:
+- Kompleks Ś wią tyń Akshardham - ok. 25 USD/os.
+- Galta Ji – ok. 15 USD/os.
+- Taj Show - od 40 USD/os.koszty wizy indyjskiejmiejsca obok siebie w samolocie za dodatkową opł atą (o cenę i dostę pnoś ć zapytaj sprzedawcę ).
+Obsługa na miejscu
+w ję z. polskim
+Informacje wizowe
+1. Za poś rednictwem organizator.
+organizator poś redniczy w uzyskaniu wizy w cenie 100 PLN/os + koszt wizy 180 PLN/os. W przypadku zgł oszenia poś rednictwa wizowego w rezerwacji konieczne jest wypeł nienie wniosku wizowego online oraz zał ą czenie w nim skanu wymaganych dokumentó w: paszportu (pdf, min. 10KB, max. 300 KB) oraz zdję cia w kolorze (jpg, min. 10 KB, max. 1 MB).
+Obowią zkowo, przed wysł aniem dokumentó w do dział u wizowego należ y zgł osić do rezerwacji usł ugę poś rednictwa.
+WAŻ NE: W przypadku zakupu ofert Last Minute, istnieje koniecznoś ć skonsultowania moż liwoś ci poś rednictwa z organizator.
+Wniosek wizowy: https://ssl.eccoholiday.com/reservation_et/wiza_indie.php
+Uprzejmie prosimy:
+- Otworzyć paszport na stronie ze zdję ciem oraz zeskanować OBYDWIE STRONY
+- Nie skanować dokumentó w do gó ry nogami oraz bokiem
+- Jako oryginał do scanu zdję cia uż ywać zdję cia kolorowego zrobionego u fotografa (z twarzą na wprost, na jasnym tle), a nie zdję cia z paszportu
+- Podawać w nagł ó wku wniosku prawdziwą datę wyjazdu oraz wpisywać rzeczywistą waż noś ć paszportu (paszporty dzieci waż ne są max. 5 lat)
+Wniosek moż na wypeł nić i przesł ać najpó ź niej na 14 dni roboczych przed wylotem.
+Uzyskana w drodze poś rednictwa wiza wydawana jest na okres 365 dni i uprawnia do wielokrotnego przekroczenia granicy.
+
+UWAGA : Do przekroczenia granicy indyjskiej przez obywateli Polski konieczny jest paszport waż ny co najmniej 6 miesię cy od daty powrotu z wyjazdu oraz wiza.
+2. Samodzielnie za pomocą systemu e-wiza.
+Do 96h przed wylotem istnieje moż liwoś ć otrzymania e-wizy w cenie zgodnej z cennikiem + opł ata za transakcję kartą ok. 2 USD*, bez koniecznoś ci wysył ania dokumentó w do Warszawy. W celu otrzymania e-visy należ y wypeł nić wniosek wizowy na stroniehttps://indianvisaonline.gov.in/evisa/tvoa.html oraz doł ą czyć podczas wypeł niania wniosku: zdję cie w kolorze w formacie jpg i skan paszportu (strona ze zdję ciem) w formacie pdf oraz opł acić e-wizę przy pomocy karty kredytowej lub debetowej.* wysokoś ć opł aty moż e ulec zmianie w zależ noś ci od banku, któ ry wydał kartę
+Udogodnienia *:
+Oferty egzotyczne
+* Poprawność udogodnień zawsze weryfikuj z opisem hotelu
+
+Ważne informacje:
+Prezentowane godziny wylotów mogą ulec zmianie.
+Zachęcamy do sprawdzenia aktualnych informacji MSZ przed podróżą w wybranym kierunku. 
+
+</div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>

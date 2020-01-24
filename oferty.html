@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Logoallsizes/logo.png">
+<meta charset="utf-8"> 
+<style>
+/*html { overflow-y:hidden;}*/
+* { padding: 0; margin: 0;}
+@font-face{ font-family: perfmedevo; src:url(Fonts/MADEEVO.otf);}
+@font-face{ font-family: boldevo;src:url(Fonts/MADEBoldEVO.otf);} 
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 2.5s;
+  animation-name: fade; animation-duration: 2.5s;}
+@-webkit-keyframes fade {from {opacity: .9} to {opacity: 1}}
+@keyframes fade {from {opacity: .9} to {opacity: 1}}
+.body{height:200vh;}
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        z-index: 101;
+        width:100%;
+        position: fixed;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  min-width: 10%;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+
+}
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+     opacity: 0.8;
+    }
+.mother1{
+    height: 200vh;
+    width: 100%;
+    background-image: url(Graphics/andre-benz-Mn9Fa_wQH-M-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+.son1{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 7.5%;
+    margin-left: 12.5%;
+    background-image: url(Graphics/oferta1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    }
+.son2{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 7.5%;
+    margin-left: 57.5%;
+    background-image: url(Graphics/oferta2.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son3{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 30.5%;
+    margin-left: 12.5%;
+    background-image: url(Graphics/oferta3.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son4{
+   position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 30.5%;
+    margin-left: 57.5%;
+    background-image: url(Graphics/oferta4.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son5{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 53.5%;
+    margin-left: 12.5%;
+    background-image: url(Graphics/oferta5.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son6{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 53.5%;
+    margin-left: 57.5%;
+    background-image: url(Graphics/oferta6.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son7{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 76.5%;
+    margin-left: 12.5%;
+    background-image: url(Graphics/oferta7.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.son8{
+    position: absolute;
+    z-index: 1;
+    height: 30%;
+    width: 32.5%;
+    border: 1px solid black;
+    margin-top: 76.5%;
+    margin-left: 57.5%;
+    background-image: url(Graphics/oferta8.jpg);
+    background-size: contain;
+    overflow:hidden;
+    }
+.box{
+    position: absolute;
+    z-index: 1;
+    height: 101%;
+    width: 62.5%;
+    margin-left: 52.5%;
+    margin-top: -0.10%;
+    transform: skewX(150deg);
+    background-color: whitesmoke;
+    }
+.textinson1{
+        margin-left: 60%;
+        margin-top: 15%;
+        font-size: 200%;
+        position: absolute;
+        z-index: 100;
+        font-family: boldevo;
+    }
+    .button {
+        z-index: 1000;
+        width: 25%;
+        height: 15%;
+        border: none;
+        background: orange;
+        position: absolute;
+        margin-top: 35%;
+        margin-left: 70%;
+        border-radius: 5px;
+        font-family: boldevo;
+        font-size: 110%;
+        text-align: center;
+    }
+    .topp{
+        margin-top: 7%;
+    }
+    .whitebox{
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        
+        background-color: white;
+        opacity: 0.4;
+
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        margin-top: -2.55%;
+        text-align: center;
+        background: black;
+        color: white;
+        opacity: 0;
+        transition-duration: 2s;
+        z-index: 5000;
+    }
+    .textfooter{
+        margin-top: 0.5%;
+        
+    }
+    .footer:hover{
+        transition-duration: 2s;
+        opacity: 1
+    }
+   
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="Logoallsizes/logo.png" alt="elo"> RIVT </div>
+<a href="index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="promocje.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="galeria.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="kontakt.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+<div class="mother1">
+    <div class="whitebox"></div>
+    <div class="son1"><p class="textinson1"><b>Tokio, Japonia</b><br><br>
+        5 999 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son2"><p class="textinson1"><b>Bangladesz</b><br><br>
+        3 935 zł zł / os.</p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son3"><p class="textinson1"><b>Delhi, Indie</b><br><br>
+        3 390 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son4"><p class="textinson1"><b>Szanghaj, Chiny</b><br><br>
+        2 990 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son5"><p class="textinson1"><b>Tokio, Japonia</b><br><br>
+        12 499 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son6"><p class="textinson1"><b>São Paulo</b><br><br>
+        5 944 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son7"><p class="textinson1"><b>Meksyk</b><br><br>
+        7 199 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    <div class="son8"><p class="textinson1"><b>Pekin, Chiny </b><br><br>
+        3 549 zł / os. </p><a href="oferty/Tokio.html" class="button"><p class="topp">Zobacz szczegóły!</p></a><div class="box"></div></div>
+    
+</div>
+
+<div class="footer"><p class="textfooter">&copy; Adam Zabdyr 3f ZSE Kraków</p></div>
+<script>
+
+</script>
+
+</body>

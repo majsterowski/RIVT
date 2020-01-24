@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../Logoallsizes/logo.png">
+<style>
+/*html { overflow-y:hidden;}*/
+* { padding: 0; margin: 0;}
+@font-face{ font-family: perfmedevo; src:url(../Fonts/MADEEVO.otf);}
+@font-face{ font-family: boldevo;src:url(../Fonts/MADEBoldEVO.otf);} 
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 2.5s;
+  animation-name: fade; animation-duration: 2.5s;}
+@-webkit-keyframes fade {from {opacity: .9} to {opacity: 1}}
+@keyframes fade {from {opacity: .9} to {opacity: 1}}
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        z-index: 101;
+        width:100%;
+        position: fixed;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  min-width: 10%;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+}
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+.odnoXX2{
+        position: absolute;
+        z-index: 101;
+        margin-top: vh;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 350%;
+    }
+
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+    opacity: 0.8;
+    }
+.mother1{
+    height: 200vh;
+    width: 100%;
+    background-image: url(../Graphics/oferta1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    .box{
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        background-color: whitesmoke;
+        opacity: 0.9;
+    }
+
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="../Logoallsizes/logo.png"> RIVT </div>
+<a href="../index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="../oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="../index.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="../index.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="../index.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+<div class="mother1">
+    <div class="box">Kraj
+JAPONIA
+Opis
+Tokio - miasto przyszłości - Sztuczna wyspa Odaiba - Góra Fudżi - Wielki Budda w Kamakurze - Portowa Yokohama - Świątynie w Nikko
+Program
+Dzień 1 :
+Zbió rka na lotnisku w Warszawie dwie godziny przed odlotem. Spotkanie z pilotem. Wylot do Japonii.
+Dzień 2 :
+Przylot do Tokio. Zwiedzanie miasta. Zwiedzanie miasta zaczynamy od dzielnicy Asakusa, najstarszej części Tokio, gdzie już w 628 r. zbudowano pierwszą świątynię buddyjską. Zwiedzanie kompleksu Senso-ji i okolicznych kapliczek. Spacer po pasażach Nakamise, pełnych sklepó w z pamiątkami. Wieczó r w rozświetlonej handlowo-rozrywkowej dzielnicy Ginza. Znajduje się tam m.in. zabytkowy budynek słynnego japońskiego teatru Kabuki. Nocleg w Tokio.
+Dzień 3 :
+Wyjazd na sztuczną wyspę Odaiba w Zatoce Tokijskiej. Wyspa jest synonimem nowoczesnych technologii - zaskakuje od pierwszej chwili i ani przez moment nie można się na niej nudzić. Zobaczyć tu można roboty, samochody przyszłości, jak i Statuę Wolności, czy włoskie miasteczko. Przejazd w rejon portu i największych w świecie targó w rybnych. To właśnie tutaj sprzedaje się m. in. błękitne tuńczyki, któ re w tym samym dniu trafiają do najlepszych restauracji w formie sashimi. Będąc tu namawiamy na spró bowanie znakomitego i najświeższego w całym mieście sushi. Po południu przejazd do dzielnicy Shinjuku, jednej z najruchliwszych w mieście. Wyjazd na jeden z wieżowcó w pozwoli ogarnąć wzrokiem gigantyczną metropolię, a przy dobrej pogodzie zobaczyć z daleka gó rę Fudżi. Wieczorem Shinjuku rozbłyska tysiącami świateł, a strefy piesze są pełne Japończykó w, udających się na kolację. Kolacja powitalna. Nocleg w hotelu.
+Dzień 4 :
+Wycieczka do Parku Narodowego Gó ry Fudżi. Fudżi jest najwyższym szczytem Japonii, jej symbolem i świętością. Przystajemy w centrum informacji o Fudżi, gdzie poznamy historię i geologiczną charakterystykę tego wulkanu, któ rego ostatnia erupcja miała miejsce w 1708 r. Wjazd na platformę widokową, położoną na zboczach wulkanu. Widać stąd często pokryty śniegiem, idealnie stożkowaty szczyt Fudżi. Przy dobrej pogodzie spacer ścieżką biegnącą po stokach wulkanu. Powró t do Tokio i nocleg.
+Dzień 5 :
+Wyjazd do dawnej stolicy Japonii – Kamakury. To okazja do oglądania posągu ponad jedenastometrowego Wielkiego Buddy, któ ry jest symbolem tego miejsca. Następnie zwiedzanie chramu Hase-dera. W otoczonej piękną przyrodą świątyni poczujemy atmosferę dawnej Japonii. Po południu przejazd do Yokohamy, któ ra jest największym portem morskim w Japonii. Spacer po rozległym China Town, w któ rym zwiedzimy świątynię Guan Di Miao. Zajrzymy przy okazji do dzielnicy portowej Minatomirai, gdzie będzie można zakupić pamiątki. Powró t do Tokio na nocleg.
+Dzień 6 :
+Dzień wolny w Tokio, któ ry poświęcimy na spacery, zakupy, smakowanie japońskich specjałó w, a przede wszystkim na obserwację miejscowych zwyczajó w i poczucie tutejszej specyficznej harmonii pomiędzy tradycją, a supernowoczesnością. Chętnych w tym dniu zaprosimy na wycieczkę fakultatywną super szybkim pociągiem – shinkansenem do Nikko. To religijne serce Japonii, gdzie znajdują się niezwykłe kompleksy świątynne buddyjskie i szintoistyczne, otoczone bujną przyrodą. Można tam zobaczyć misternie i z przepychem zdobione wspaniałe świątynie, jedyne w swoim rodzaju. W programie ró wnież odwiedziny w mauzoleum jednego z najpotężniejszych władcó w Japonii, szoguna Tokugawa Ieyasu. Powró t pociągiem do Tokio. Pożegnalna kolacja i nocleg w hotelu.
+Dzień 7 :
+Rano dalsze zwiedzanie Tokio. Udajemy się do Harajuku, dzielnicy po któ rej przechadzają się młodzi Japończycy ubrani w ekstrawaganckie, najmodniejsze stroje. W pobliżu pó jdziemy do szintoistycznej świątyni Meiji, jednej z najważniejszych w Japonii. W ciszy pięknego parku można znakomicie odpocząć od wielkomiejskiego zgiełku. Przejazd na lotnisko i wylot do Polski.
+Dzień 8 :
+Przylot do Warszawy na lotnisko Chopina.
+Program fakultatywny
+- wycieczka fakultatywna do Nikko – ok.160 USD.
+Świadczenia
+Zakwaterowanie
+5 noclegó w w hotelu o standardzie***, pokoje 2 os. z łazienkami.
+Wyżywienie
+Śniadania w hotelu, kolacja powitalna i pożegnalna. Pozostałe posiłki we własnym zakresie.
+Transpo
+Przeloty wg programu, transfery mikrobusem, komunikacja publiczna i miejska, pociągi.
+Ubezpieczenie
+Signal Iduna S.A.
+Realizacja programu turystycznego, wstępy do obiektó w wymienionych w programie, wszelkie opłaty administracyjne.
+Opieka polskiego pilota.
+Składka na Turystyczny Fundusz Gwarancyjny.
+Uwagi praktyczne
+Minimalna liczba uczestnikó w w grupie: 10, maksymalna: 18.
+Kolejność zwiedzania może ulec zmianie.
+Informacje dotyczące realizacji imprezy, niezbędnego bagażu, dokładnych godzin przelotu itd. Zostaną przesłane pocztą elektroniczną w liście do uczestnikó w, około 2 tygodnie przed wyjazdem. Prosimy o podanie kontaktowego adresu e-mail przy podpisywaniu umowy. Wyżywienie poza wymienionym w programie dla chętnych pomaga organizować na bieżąco pilot. Należy pamiętać, że Japonia jest krajem drogim. W sytuacji gdy nieletni podró żuje z jednym z rodzicó w, dziadkami lub opiekunami (a nie z obojgiem rodzicó w) wymagane jest pismo notarialne w języku angielskim poświadczające że rodzice (lub drugirodzic dziecka) wyrażają zgodę na wyjazd.
+Płatności:
+I rata: 25% ceny złotó wkowej płatne przy rezerwacji, II rata: 100% ceny złotó wkowej (minus I rata) - na 45 dni przed wyprawą, III rata: 400 USD - uczestnik zabiera ze sobą na wyprawę. i przekazuje pilotowi. Kwota ta jest w całości wykorzystana na pokrycie części świadczeń (m.in. koszty programowe, transport lokalny, niektó re noclegi i posiłki).
+Informacje wizowo-paszportowe:
+Przy dokonywaniu rezerwacji należy podać dodatkowo dane paszportowe:
+a) seria i numer paszportu; b) data wydania oraz termin ważności paszportu; c) miejsce wydania/ organ wydający; d) obywatelstwo; e) miejsce urodzenia.
+Brak wymaganych danych paszportowych i osobowych lub ich niezgodność z paszportem zabieranym na wyprawę, może spowodować dodatkowe koszty związane z realizacją imprezy turystycznej lub w ostateczności uniemożliwić uczestnictwo w zarezerwowanej imprezie.
+Wymagany paszport, ważny min. 6 miesięcy od daty zakończenia imprezy. Przy wjeździe do Japonii w celu turystycznym obywatele Polski nie potrzebują wiz, o ile pobyt trwa nie dłużej niż 90 dni.
+Informacje zdrowotne:
+Nie ma obowiązku szczepień. Jednak jak wszędzie na świecie, ró wnież w Polsce, warto być zaszczepionym przeciw żó łtaczce typu A i B, tężcowi i ewentualnie innym chorobom. Należy zawsze pamiętać o podstawowych zasadach higieny. W miesiącach letnich należy szczegó lną uwagę przywiązywać do ochrony przed słońcem, używając kremó w ochronnych, okularó w przeciwsłonecznych i nakrycia głowy.
+Pogoda i klimat:
+W Japonii panuje klimat łagodny i umiarkowany, z chłodnymi zimami i ciepłymi, wilgotnymi latami. Wyró żniamy trzy strefy klimatyczne: pó łnoc kraju leży w strefie umiarkowanie ciepłej, centrum Japonii to klimat podzwrotnikowy, a południowy skraj państwa leży w strefie zwrotnikowej. Głó wnym czynnikiem kształtującym klimat Japonii jest monsunowa cyrkulacja mas powietrza, związana z panującymi układami barycznymi nad Azją i Oceanem Spokojnym. Najbardziej stabilna pogoda w Japonii panuje wiosną, czyli od marca do maja oraz jesienią, od września do listopada. Te dwie pory roku są szczegó lnie polecane na wizytę w Japonii, ze względu na przyjemne temperatury i z reguły piękną pogodę. W rejonie stolicy - Tokio, temperatura wiosną oscyluje w granicach od 18° C do 25° C, a jesienią 22° C do 27° C. Ze względu na rzeźbę terenu, występują lokalne ró żnice termiczne. Na przykład na wulkanie Fudżi latem jest zaledwie 6° C. Panuje tam typowy alpejski klimat. Japonia jest krajem stosunkowo wilgotnym, obfitującym w opady.
+O wyprawie:
+Japonia, ze swoją ciekawą historią i nowoczesnością, odmiennością zwyczajó w oraz egzotycznymi krajobrazami, to kraj, któ ry każdy prawdziwy podró żnik musi odwiedzić. Dawny kraj samurajó w stał się obecnie potęgą przemysłową i technologiczną. To rzecz powszechnie znana, ale nie wszyscy zdają sobie sprawę z tego, że Japończycy są narodem bardzo uduchowionym. Wyznają państwową religię – szintoizm, opartą na japońskiej mitologii oraz buddyzm i jego odmianę - zen. Często nawet obie religie jednocześnie, przy czym szinto może wyznawać tylko członek narodu japońskiego, wybranego przez bó stwa. Są wrażliwi na estetykę we wszystkim co robią oraz na piękno przyrody. Wiosna i jesień w Japonii są najpiękniejszymi i najbardziej kolorowymi porami roku, a bogate świątynie, monumentalne zamki, ozdobne ogrody, majestatyczna Fudżi - czynią z Japonii jedno najbardziej czarownych miejsc świata. Będziemy podziwiać piękno natury, liczne zabytki historyczne oraz połączenie tradycji z nowoczesnością. Zapoznamy się ze zwyczajami i dniem codziennym Japończykó w. Spotkamy się z odmienną, często trudną do zrozumienia dla nas kulturą, znajdziemy się w zupełnie innym otoczeniu, w innym świecie. Poznamy też wspaniałą kuchnię japońską, tak ró żną od naszej. To nie tylko sushi i sashimi, to wielki wybó r ró żnorodnych potraw, któ re łączy głó wnie to, że wszystkie posiłki spożywa się tu za pomocą pałeczek. Wyprawa jest przeznaczona dla osó b chcących aktywnie zwiedzać świat, znajdujących przyjemność w pokonywaniu trudó w dalekich podró ży i poznawaniu odmiennych kultur. Staramy się w miarę możliwości docierać ró wnież w miejsca położone poza obszarami masowej turystyki, ale nie unikamy miejsc atrakcyjnych i popularnych. Wyprawa nie należy do trudnych, Japonia jest krajem doskonale zorganizowanych i ceni się tam punktualność. Podczas wyjazdó w zdarzają się przejazdy komunikacją publiczną i miejską. Zakwaterowanie przewidujemy w hotelach 3 gwiazdkowych z łazienkami. Prosimy zabrać ze sobą nowe banknoty (wydane po 2013 roku), któ re nie są zniszczone lub popisane. Wyprawie od początku do końca towarzyszy polski pilot.
+Szukasz dodatkowych informacji dotyczących imprezy - zadaj pytanie e-mailem egzotyka@almatur.pl lub na facebook.com/almaturwycieczki
+Informacja o cenie:
+Ceny wraz z częścią walutową nie obejmują:
+- pozostałych posiłkó w nieujętych w programie, aranżowanych przez pilota (orientacyjny koszt ok. 10-18 USD/ posiłek), możliwość zakupó w w sklepach i tańszego wyżywienia, - wieczornych wyjść i rozrywek oraz pozostałych aktywności i wycieczek fakultatywnych (ceny uzależnione są od ilości chętnych, orientacyjne kwoty podajemy w liście do uczestnikó w).
+Udogodnienia *:
+Oferty egzotyczne
+* Poprawność udogodnień zawsze weryfikuj z opisem hotelu 
+
+https://www.fostertravel.pl/wycieczki-objazdowe/japonia-japonski-wachlarz/ftr-92250-27/?t=tAMoCTQyi7A9B7aq9U27K2Jt46Ief3PNqrIDNSqtxrz5B6fs4FohxoubYCsrLAEGSKVT3o8bwYVs7vRRjD2dq&wyjazd=Warszawa&dorosli=2&uid=wMuq8z3A8Lmj</div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>

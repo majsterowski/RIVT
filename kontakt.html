@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Logoallsizes/logo.png">
+<meta charset="utf-8"> 
+<style>
+html { overflow-y:hidden;}
+* { padding: 0; margin: 0;}
+@font-face{ font-family: perfmedevo; src:url(Fonts/MADEEVO.otf);}
+@font-face{ font-family: boldevo;src:url(Fonts/MADEBoldEVO.otf);} 
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 2.5s;
+  animation-name: fade; animation-duration: 2.5s;}
+@-webkit-keyframes fade {from {opacity: .9} to {opacity: 1}}
+@keyframes fade {from {opacity: .9} to {opacity: 1}}
+.tako{
+    position: absolute;
+    background-size: cover;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Graphics/joshua-alan-davis-1lqXfJJQkng-unsplash.jpg);
+    
+    }
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        z-index: 101;
+        width:100%;
+        position: fixed;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  min-width: 10%;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+}
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+     opacity: 0.8;
+    }
+.mother1{
+    width: 100%;
+    background-image: url(Graphics/andre-benz-Mn9Fa_wQH-M-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+    .whitebox{
+        z-index: 70;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        opacity: 0.25;
+
+    }
+    .iletegojeszczebosz{
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        height: 80%;
+        width: 60%;
+        z-index: 1000;
+    }
+    table{
+    
+    margin: auto;
+    width: 50%;
+    font-size: 1.4vw;
+}
+
+tr{
+    margin-top: 30px;
+    
+}
+
+td{
+    height: 100px;
+    width: 50%;
+}
+
+.col_left{
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.col_right{
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+input{
+    height: 60px;
+    width: 80%;
+    border: 2px solid #910200;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-sizing: border-box; 
+    font-size: 16pt;
+    outline: none;
+}
+
+input:focus, textarea:focus, option:active{
+    background-color: rgba(50, 50, 50, 0.1);
+}
+
+textarea{
+    height: 100px;
+    width: 80%;
+    border: 2px solid #910200;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-sizing: border-box; 
+    font-size: 14pt;
+    box-sizing: border-box;
+    outline: none;
+    padding: 10px;
+}
+
+button{
+    height: 40px;
+    width: 40%;
+    font-size: 1.2vw;
+    border-radius: 3px;
+    background-color: rgba(50, 50, 50, 0.1);
+    border: 2px solid #910200;
+    outline: none;
+}
+
+button:active{
+    background-color: rgba(50, 50, 50, 0.4);
+}
+
+select{
+    height: 60px;
+    width: 80%;
+    border: 2px solid #910200;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-sizing: border-box; 
+    font-size: 16pt;
+    outline: none;
+}
+    .footer{
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        margin-top: 48.5%;
+        text-align: center;
+        background: black;
+        color: white;
+        opacity: 0;
+        transition-duration: 2s;
+        z-index: 5000;
+    }
+    .textfooter{
+        margin-top: 0.5%;
+        
+    }
+    .footer:hover{
+        transition-duration: 2s;
+        opacity: 1
+    }
+   
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="Logoallsizes/logo.png" alt="elo"> RIVT </div>
+<a href="index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="promocje.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="galeria.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="kontakt.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+<div class="tako"></div>
+<div class="whitebox"></div>
+<div class="iletegojeszczebosz">
+  <form>
+                    <table>
+                        <tr>
+                            <td class="col_left">Imie i nazwisko</td>
+                            <td class="col_right"><input type="text" placeholder="Imie i nazwisko"></td>
+                        </tr>
+                        <tr>
+                            <td class="col_left">Email</td>
+                            <td class="col_right"><input type="email" placeholder="simple@mail.com"></td>
+                        </tr>
+                        <tr>
+                            <td class="col_left">Wybierz wycieczkę</td>
+                            <td class="col_right">
+                                <select>
+                                    <option>Tokio, Japonia - 5 999 zł / os.</option>
+                                    <option>Delhi, Indie - 3 390 zł / os.</option>
+                                    <option>Sztkoholm - 7200zł</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col_left">Data</td>
+                            <td class="col_right"><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="col_left" style="height: 140px">Ilość osób i ewentualne prośby</td>
+                            <td class="col_right" style="height: 140px"><textarea placeholder='"Witam.."'></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="col_left" style="height: 80px"><button type="reset">Wyczyść</button></td>
+                            <td class="col_right" style="height: 80px"><button type="submit">Rezerwuj</button></td>
+                        </tr>
+                    </table>
+                </form>
+</div>
+<div class="footer"><p class="textfooter">&copy; Adam Zabdyr 3f ZSE Kraków</p></div>
+
+<script>
+
+</script>
+
+</body>

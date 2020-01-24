@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="Logoallsizes/logo.png">
+<style>
+html { overflow-y:hidden;}
+.slideshow-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 30px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 10px 10px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+* {
+        padding: 0;
+        margin: 0;
+    }
+@font-face{
+        font-family: perfmedevo;
+        src:url(Fonts/MADEEVO.otf);
+    }
+@font-face{
+        font-family: boldevo;
+        src:url(Fonts/MADEBoldEVO.otf);
+    } 
+.mySlides{
+        width: 100%;
+        height: 100vh;
+    }
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+.zmiany{
+        position: fixed;
+    }
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        width:100%;
+        position: absolute;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+.menu a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+  min-width: 10%;
+}
+    
+
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+.tekst{
+        position: fixed;
+        z-index: 1000;
+        margin-top: 30vh;
+        margin-left: 50vh;
+        color: white;
+        font-family: perfmedevo;
+        font-size: 600%;
+    }
+.tekst2{
+        position: fixed;
+        z-index: 1000;
+        margin-top: 50vh;
+        margin-left: 30vh;
+        color: white;
+        font-family: perfmedevo;
+        font-size: 600%;
+    }
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+    opacity: 0.8;
+    }
+    .kierwa{
+        width: 100%;
+        height:100%;
+    }
+    .footer{
+        position: absolute;
+        width: 100%;
+        height: 5%;
+        margin-top: 48.5%;
+        text-align: center;
+        background: black;
+        color: white;
+        opacity: 0;
+        transition-duration: 2s;
+        z-index: 5000;
+    }
+    .textfooter{
+        margin-top: 0.5%;
+        
+    }
+    .footer:hover{
+        transition-duration: 2s;
+        opacity: 1
+    }
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="Logoallsizes/logo.png" alt="elo"> RIVT </div>
+<a href="index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="promocje.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="galeria.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="kontakt.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="slider/1.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/2.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/3.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/4.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/5.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/6.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/7.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/8.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/9.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/10.jpg" class="kierwa" alt="elo">
+</div>
+<div class="mySlides fade">
+  <img src="slider/11.jpg" class="kierwa" alt="elo">
+</div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+   <div class="footer"><p class="textfooter">&copy; Adam Zabdyr 3f ZSE Kraków</p></div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>

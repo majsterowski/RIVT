@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>RIVT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../Logoallsizes/logo.png">
+<style>
+/*html { overflow-y:hidden;}*/
+* { padding: 0; margin: 0;}
+@font-face{ font-family: perfmedevo; src:url(../Fonts/MADEEVO.otf);}
+@font-face{ font-family: boldevo;src:url(../Fonts/MADEBoldEVO.otf);} 
+.fade {-webkit-animation-name: fade; -webkit-animation-duration: 2.5s;
+  animation-name: fade; animation-duration: 2.5s;}
+@-webkit-keyframes fade {from {opacity: .9} to {opacity: 1}}
+@keyframes fade {from {opacity: .9} to {opacity: 1}}
+.orange{
+        height: 1vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: #2098D1;
+    }
+.menu{
+        z-index: 101;
+        width:100%;
+        position: fixed;
+        top:1vh;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+a{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(0px) translateZ(0);
+  transform: perspective(0px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  height: 6vh;
+  min-width: 10%;
+  background-color: whitesmoke;
+  z-index: 101;
+  font-family: perfmedevo;
+  font-size: 150%;
+}
+.top1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top5:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.top1:hover, .top1:focus, .top1:active{
+  color: white;
+}
+.top2:hover, .top2:focus, .top2:active {
+  color: white;
+}
+.top3:hover, .top3:focus, .top3:active {
+  color: white;
+}
+.top4:hover, .top4:focus, .top4:active {
+  color: white;
+}
+.top5:hover, .top5:focus, .top5:active {
+  color: white;
+}
+.top1:hover:before, .top1:focus:before, .top1:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.top2:hover:before, .top2:focus:before, .top2:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top3:hover:before, .top3:focus:before, .top3:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    } 
+.top4:hover:before, .top4:focus:before, .top4:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top5:hover:before, .top5:focus:before, .top5:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+.top100{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 300%;
+    
+    }
+.top101{
+        height: 6vh;
+        min-width: 25%;
+        background-color: whitesmoke;
+        z-index: 101;
+    }
+.odno1{
+        margin-top: 1.25vh;
+    }
+.odnoXX2{
+        position: absolute;
+        z-index: 101;
+        margin-top: vh;
+        color: black;
+        font-family: perfmedevo;
+        font-size: 350%;
+    }
+
+
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    margin-top: 0.5vh;
+    margin-left: 40%;
+    width: 10%;
+    opacity: 0.8;
+    }
+.mother1{
+    height: 200vh;
+    width: 100%;
+    background-image: url(../Graphics/oferta1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    .box{
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        background-color: whitesmoke;
+        opacity: 0.9;
+    }
+
+</style>
+</head>
+
+<body>
+<div class="orange"></div>
+    
+<div class="menu">
+<div class="top100 fade"><img class="logo" src="../Logoallsizes/logo.png"> RIVT </div>
+<a href="../index.html" class="fade"><div class="top1"><p class="odno1">Główna</p></div></a>
+<a href="../oferty.html" class="fade"><div class="top2"><p class="odno1">Oferty</p></div></a>
+<a href="../index.html" class="fade"><div class="top3"><p class="odno1">Promocje</p></div></a>
+<a href="../index.html" class="fade"><div class="top4"><p class="odno1">Galeria</p></div></a>
+<a href="../index.html" class="fade"><div class="top5"><p class="odno1">Kontakt</p></div></a>
+<div class="top101 fade"></div>
+</div>
+<div class="mother1">
+    <div class="box">
+Kraj
+Chiny
+Opis
+Szanghaj - Suzhou - Wuxi - Zhouzhuang - Hangzhou - Szanghaj﻿ Dzień 1. Warszawa - Szanghaj.  Wylot z Warszawy.Dzień 2. Szanghaj. Przylot do Szanghaju oraz rozpoczę cie programu zwiedzania. Odwiedzimy Bund - czyli szanghajskie nabrzeż e - jeden z symboli miasta, któ ry przeniesie nas w czasy kolonialne. Ogromne klasycystyczne budynki znajdują cych się tu bankó w, urzę dó w pań stwowych i hoteli to pamią tka z czasó w, gdy w mieś cie panowali Brytyjczycy. Nastę pnie Perł a Orientu, gó rują ca nad rzeką Huang Pu wież a telewizyjna, któ ra dzieli miasto na dwie czę ś ci. Kolacja, a nastę pnie dla chę tnych fakultatywna wycieczka - rejs po rzece Huang Pu. Powró t do hotelu autokarem.Dzień 3. Szanghaj. Po ś niadaniu wizyta w Muzeum Szanghajskim, znajdują cym się na Placu Ludowym. Gmach ten mieś ci w sobie kolekcję ponad 120 tys. sztuk reliktó w kultury chiń skiej, zajmują c powierzchnię 12 tys. m2. Spacer po starym mieś cie gdzie znajdują się mał e ryneczki oferują ce wszystko od herbaty i antykó w, po tradycyjne pamią tki. Nastę pnie zabytkowy ogró d Yuyuan z czasó w dynastii Ming, z mnó stwem ś cież ek, pagó d, stawó w i skalniakó w a na koniec wizyta w Ś wią tyni Nefrytowego Buddy, któ ra został a wzniesiona w 1882 roku, jako miejsce przechowywania dwó ch figur Buddy, przywiezionych z Birmy. Kolacja w restauracji, a dla chę tnych fakultatywnie pokaz cyrkowych akrobacji. Powró t do hotelu.Dzień 4. Szanghaj - Suzhou. Ś niadanie oraz przejazd autobusem do Suzhou. Zwiedzanie miasta nazywanego Wenecją Wschodu. Suzhou w Epoce Trzech Kró lestw przez kilka lat był o stolicą pań stwa Wu. Miasto od XIV wieku przodował o w produkcji jedwabiu, a zyski przeznaczone był y m.in. na utworzenie 287 nowych ogrodó w, z któ rych 69 przetrwał o do dziś. Odwiedzimy przepię kny Ogró d Wangshi (Ogró d Mistrza Sieci) z 1149 roku, zabytkową uliczkę Shantang, Wzgó rze Tygrysiego Kurhanu usypane w miejscu grobu zał oż yciela Suzhou - He Lu oraz starą uliczkę Pingjiang. Po poł udniu wizyta z Muzeum Jedwabiu z moż liwoś cią dokonania zakupó w oraz w Instytucie Hafciarstwa. Kolacja w restauracji oraz powró t do hotelu.Dzień 5. Suzhou - Wuxi-Suzhou. Po ś niadaniu, dla chę tnych poranna gimnastyka Tai Chi. Nastę pnie przejazd autobusem do starego miasta Wuxi. Na miejscu rejs po trzecim pod wzglę dem wielkoś ci jeziorze Chin - Tai Hu, w czasie któ rego udamy się na Yuantou Zhu (Wysepkę Ż ó ł wiej Gł owy). Kolacja w restauracji oraz nocleg w hotelu.Dzień 6. Suzhou - Zhouzhuang - Hangzhou. Po ś niadaniu przejazd autokarem do Zhouzhuang - wpisanego na Listę Ś wiatowego Dziedzictwa Kulturalnego i Przyrodniczego UNESCO. Powstał e w czasach Yuan miasto, pocię te jest licznymi kanał ami z mnó stwem urokliwych, kamiennych mostkó w. Po poł udniu udamy się do miasta Hangzhou - waż nego oś rodka administracyjnego, w centrum jednego z najlepiej prosperują cych regionó w Chin. Kolacja w restauracji, nocleg w hotelu.Dzień 7. Hangzhou. Ś niadanie w hotelu oraz rozpoczę cie zwiedzania miasta. Wizyta w malowniczo zlokalizowanym Lingyin Si (Klasztor Ukrytych Dusz) oraz rejs ł odzią po Jeziorze Zachodnim poł ą czony z wizytą w najbardziej reprezentatywnym ogrodzie Hangzhou - Guozhuang Garden. Kolacja w restauracji, nocleg w hotelu.Dzień 8. Hangzhou - Szanghaj. Po ś niadaniu odwiedzimy plantację herbaty. Miejscowa herbata Lung Ching jest dobrze znana w cał ym kraju. Nastę pnie udamy się w drogę powrotną do Szanghaju. Po przyjeź dzie czas wolny na zakup pamią tek na ulicy Nanjing Road, bę dą cej gł ó wnym pasaż em handlowym miasta. Kolacja w restauracji oraz nocleg w hotelu.Dzień 9. Szanghaj - Warszawa.  Po ś niadaniu transfer na lotnisko i zakoń czenie programu. Wylot do Polski (przylot moż e nastą pić dnia nastę pnego).
+Wyposażenie
+Brak udogodnień dla osób o ograniczonej sprawności ruchowej.
+Cena zawiera
+przelot na trasie Polska - Szanghaj - Polska z przesiadkamiopł aty lotniskowe, ubezpieczenie KL, NNWzakwaterowanie w hotelach 4**** w pokojach dwuosobowych z ł azienkami i klimtyzacją ś niadania w formie bufetu, obiadokolacje wg programu (w cenie 1 szklanka napoju)lokalny transport klimatyzowanym autokaremzwiedzanie wg programu (bez biletó w wstę pu do zwiedzanych obiektó w)serwis polskiego pilota
+Cena nie zawiera
+obowią zkowa opł ata za wstę py do zwiedzanych obiektó w, obsł ugę lokalnych przewodnikó w, serwis miejscowego agenta, zwyczajowe napiwki i inne opł aty lokalne w wysokoś ci ok. 180 USD na osobę jako pakiet pł atny lokalnemu kontrahentowi (pilotowi) na miejscu wycieczkidopł ata do pokoju jednoosobowego, albo do tań szej opcji "podró ż ują cy samotnie" (uczestnik moż e być dokwaterowany do innej osoby tej samej pł ci) - w przypadku realizacji dokwaterowania w ramach opcji "podró ż ują cy samotnie", dopł ata zostanie anulowanakoszty wizy chiń skiejkoszty wycieczek fakultatywnych
+-  Szanghaj nocą (25 USD/os.)
+-  Przedstawienie z czasó w dynasti Song w Hangzhou       (40USD/os.)
+- Rejs po rzece Huang Pu (29 USD/os.)
+-  Przedstawienie cyrkowe w Szanghaju (35 USD/os.)
+
+
+Obsługa na miejscu
+w ję z. polskim
+Informacje wizowe
+WizyWymagane są wizy, wydawane przez Ambasadę Chin w Warszawie w cenie 445 PLN/os*. organizator poś redniczy w uzyskaniu wizy w cenie 100 PLN/os. za poś rednictwo.Zgodnie z chiń skim prawem i przepisami oraz mię dzynarodowymi praktykami, od 15.12.2019 roku Ambasada Chin w Polsce bę dzie wydawał a wizy biometryczne. Ambasada upoważ nia Chiń skie Centrum Obsł ugi Aplikacji Wizowych w Warszawie do pobierania odciskó w linii papilarnych dziesię ciu palcó w obywateli Polski, obcokrajowcó w posiadają cych udokumentowane prawo stał ego pobytu w Polsce chcą cych ubiegać się o wizę do Chin.CZEGO WYMAGANY OD KLIENTÓ W KORZYSTAJACYCH Z POSREDNICTWA organizator?1. Posiadania paszportu waż nego min. 6 miesię cy od daty wjazdu do Chin (z 3 pustymi stronami obok siebie/ogó lnie 6 wolnych stron)
+2. NAJPÓ Ź NIEJ NA 21 DNI ROBOCZYCH PRZED WYLOTEM na adres mailowy: wizy@eccoholiday.com należ y przesł ać elektronicznie wypeł niony wniosek wizowy  (prawidł owo, zgodnie z poniż szą instrukcją KLIKNIJ TUTAJ) osobno dla każ dego uczestnika celem weryfikacji poprawnoś ci wypeł nienia wnioskuJeż eli wniosek uzyska akceptację dział u wizowego należ y przesł ać go najpó ź niej na 14 DNI ROBOCZYCH PRZED WYLOTEM w wersji papierowej wraz z:- paszportem, - dwoma zdję ciami
+UWAGA ! Zdję cie, wydrukowane na papierze fotograficznym, musi speł niać wszystkie wytyczne wskazane w instrukcji wypeł nienia wniosku-   wydrukowanym dowodem rezerwacji/voucherem (jeden voucher osobno do każ dego wniosku)-   ksero paszportu (na biał ej kartce formatu A-4 – strona ze zdję ciem)na adres biura przedstawicielskiego: Crear Travel sp. z o.o., ul. Berezyń ska 39 lok. 65, 03-908 Warszawaz oznaczeniem nazwy imprezy i jej terminu.3. Pracownik dział u wizowego skontaktuje się z wnioskodawcą i poinformuje zainteresowanego czy wnioski są prawidł owo wypeł nione oraz wskaż e moż liwe  terminy wizyty w centrum wizowym w Warszawie, na któ rą każ da osoba aplikują ca o wizę bę dzie musiał a stawić się osobiś cie w celu zł oż enia odciskó w palcó w.Podczas wizyty w centrum wizowym pracownik organizatora bę dzie do dyspozycji klientó w korzystają cych z poś rednictwa wizowego.
+Udogodnienia *:
+Oferty egzotyczne
+* Poprawność udogodnień zawsze weryfikuj z opisem hotelu 
+</div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>
